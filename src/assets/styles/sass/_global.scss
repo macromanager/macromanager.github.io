@@ -12,11 +12,22 @@ section{
     // text-decoration: none;
 
 // }
+%title-font-size{
+    font-size: 30px;
+}
 
-.subtitle{
+%subtitle-font-size{
     font-size: 20px;
     //text-decoration: underline;
 }
+
+%title-space{
+    margin-bottom: 25px;
+}
+
+
+
+
 
 img{
     width: 100%;

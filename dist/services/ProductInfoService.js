@@ -12,6 +12,7 @@ exports.__esModule = true;
 var core_1 = require("@angular/core");
 var AppConfig_1 = require("../utilities/AppConfig");
 var Card_1 = require("../models/Card");
+var Installer_1 = require("../models/Installer");
 var ProductInfoService = /** @class */ (function () {
     function ProductInfoService() {
         this.config = new AppConfig_1.AppConfig;
@@ -19,7 +20,11 @@ var ProductInfoService = /** @class */ (function () {
         this.email = "MacroManagerInfo@gmail.com";
         this.imageUrls = this.initializeImages();
         this.cards = this.initializeCards();
+        this.installers = this.initializeInstallers();
     }
+    ProductInfoService.prototype.getInstallers = function () {
+        return this.installers;
+    };
     ProductInfoService.prototype.getImageUrls = function () {
         return this.imageUrls;
     };
@@ -27,7 +32,7 @@ var ProductInfoService = /** @class */ (function () {
         return this.cards;
     };
     ProductInfoService.prototype.initializeImages = function () {
-        var imagesPath = this.config.getImagesPath() + '/macro-manager-images';
+        var imagesPath = this.config.getUploadsPath() + '/macro-manager-images';
         var urls = [
             imagesPath + '/macro_packages.png',
             imagesPath + '/macro_macroEditor_properties.png',
@@ -36,6 +41,17 @@ var ProductInfoService = /** @class */ (function () {
             imagesPath + '/macro_install.png',
         ];
         return urls;
+    };
+    ProductInfoService.prototype.initializeInstallers = function () {
+        var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+        var title = 'MacroManager';
+        var version = '1.1.1';
+        var url = downloadsPath + '/MacroManager.DesktopInstaller.msi';
+        var installer1 = new Installer_1.Installer(title + "_v" + version, version, url);
+        var downloads = [
+            installer1,
+        ];
+        return downloads;
     };
     ProductInfoService.prototype.initializeCards = function () {
         var cards = [

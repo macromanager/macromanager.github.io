@@ -16,6 +16,7 @@ var FooterComponent_1 = require("../components/FooterComponent");
 var router_1 = require("@angular/router");
 var ApplicationRoutes_1 = require("../routes/ApplicationRoutes");
 var LearnComponent_1 = require("../components/LearnComponent");
+var DownloadsComponent_1 = require("../components/DownloadsComponent");
 var CardComponent_1 = require("../components/CardComponent");
 var MenuComponent_1 = require("../components/MenuComponent");
 var CarouselComponent_1 = require("../components/CarouselComponent");
@@ -27,7 +28,17 @@ var MainModuleLibrary = /** @class */ (function () {
             imports: [router_1.RouterModule.forRoot(ApplicationRoutes_1.ApplicationRoutes),
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule],
-            declarations: [HeaderComponent_1.HeaderComponent, AppComponent_1.AppComponent, FooterComponent_1.FooterComponent, HomeComponent_1.HomeComponent, LearnComponent_1.LearnComponent, CardComponent_1.CardComponent, MenuComponent_1.MenuComponent, CarouselComponent_1.CarouselComponent],
+            declarations: [
+                HeaderComponent_1.HeaderComponent,
+                AppComponent_1.AppComponent,
+                FooterComponent_1.FooterComponent,
+                HomeComponent_1.HomeComponent,
+                DownloadsComponent_1.DownloadsComponent,
+                LearnComponent_1.LearnComponent,
+                CardComponent_1.CardComponent,
+                MenuComponent_1.MenuComponent,
+                CarouselComponent_1.CarouselComponent
+            ],
             bootstrap: [AppComponent_1.AppComponent]
         })
     ], MainModuleLibrary);

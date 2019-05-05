@@ -6,13 +6,13 @@ exports.__esModule = true;
 // })
 var AppConfig = /** @class */ (function () {
     function AppConfig() {
-        this.imagesPath = "/images";
+        this.imagesPath = "/uploads";
     }
-    AppConfig.prototype.getImagesPath = function () {
+    AppConfig.prototype.getUploadsPath = function () {
         return this.imagesPath;
     };
     AppConfig.prototype.getImageUrl = function (fileName) {
-        var imagesPath = this.getImagesPath();
+        var imagesPath = this.getUploadsPath();
         var fullpath = imagesPath + '/' + fileName;
         return fullpath;
     };

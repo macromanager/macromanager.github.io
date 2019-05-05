@@ -4,8 +4,8 @@
         flex-direction: column;
         .nav-item{
             margin: 0px;
-            background-color: transparent;
             a{
+                background-color: transparent;
                 color: white;
                 padding: 0px;
                 &:hover{
@@ -40,13 +40,22 @@
     margin: 0px;
     .nav-item{
         
-        background-color: dimgray;
+       
         margin-left: 10px;
+   
         a{
+            background-color: dimgray;
             display: block;
             padding: 5px 20px;
             color: white;
             text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+
+            &:hover{
+                background-color: $white;
+                color: $black;
+            }
         }
     }
 

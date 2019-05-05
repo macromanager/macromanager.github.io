@@ -1,33 +1,32 @@
 import {Component} from "@angular/core"
-import {Card} from "../models/Card"
+import {Installer} from "../models/Installer"
 import {ProductInfoService} from "../services/ProductInfoService";
 
 
 @Component({
     moduleId: module.id,
     //moduleId: __moduleName,
-    selector: "home-page-ui",
-    templateUrl: "../views/home.html",
-    styleUrls: ["../assets/styles/css/home.css"]
+    selector: "downloads-page-ui",
+    templateUrl: "../views/downloads.html",
+    styleUrls: ["../assets/styles/css/downloads.css"]
 })
-export class HomeComponent {
+export class DownloadsComponent {
     constructor(private prodInfoService: ProductInfoService) { }
-    public cards: Card[];
-    public slideUrls: string[];
+    public installers: Installer[];
 
 
     ngOnInit() {
-        this.setImageUrls();
-        this.setCards();
+        this.setDownloads();
+        //this.setCards();
     }
  
-    private setImageUrls(): void {
-        this.slideUrls = this.prodInfoService.getImageUrls();
+    private setDownloads(): void {
+        this.installers = this.prodInfoService.getInstallers();
     }
 
-    private setCards(): void{
-        this.cards = this.prodInfoService.getCards();
-    }
+    // private setCards(): void{
+    //     this.cards = this.prodInfoService.getCards();
+    // }
 
  
     

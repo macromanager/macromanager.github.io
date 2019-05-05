@@ -5,8 +5,11 @@ html, body {
 section {
   padding: 50px 0px; }
 
-.subtitle {
-  font-size: 20px; }
+.section-intro .intro .title {
+  font-size: 30px; }
+
+.section-intro .intro .title {
+  margin-bottom: 25px; }
 
 img {
   width: 100%;

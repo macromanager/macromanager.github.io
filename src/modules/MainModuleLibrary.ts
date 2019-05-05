@@ -8,6 +8,8 @@ import {FooterComponent} from '../components/FooterComponent'
 import { RouterModule }   from '@angular/router';
 import { ApplicationRoutes }   from '../routes/ApplicationRoutes';  
 import { LearnComponent } from '../components/LearnComponent';
+import { DownloadsComponent } from '../components/DownloadsComponent';
+
 import { CardComponent } from '../components/CardComponent';
 import { MenuComponent } from '../components/MenuComponent';
 import { CarouselComponent } from '../components/CarouselComponent';
@@ -17,7 +19,17 @@ import { CarouselComponent } from '../components/CarouselComponent';
     imports: [RouterModule.forRoot(ApplicationRoutes),
                 BrowserModule,
                 FormsModule],
-    declarations: [HeaderComponent, AppComponent, FooterComponent, HomeComponent, LearnComponent, CardComponent, MenuComponent, CarouselComponent],
+    declarations: [
+        HeaderComponent, 
+        AppComponent, 
+        FooterComponent, 
+        HomeComponent,
+        DownloadsComponent,
+        LearnComponent, 
+        CardComponent, 
+        MenuComponent, 
+        CarouselComponent
+    ],
     bootstrap: [AppComponent]
 })
 export class MainModuleLibrary { }

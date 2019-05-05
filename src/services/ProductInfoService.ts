@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AppConfig } from '../utilities/AppConfig';
 import {Card} from '../models/Card';
+import {Installer} from '../models/Installer';
+
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +13,7 @@ export class ProductInfoService {
     private email: string;
     private imageUrls: string[];
     private cards: Card[];
-    private downloadUrls: string[];
+    private installers: Installer[];
   
     constructor() {
       this.config = new AppConfig;
@@ -19,11 +21,11 @@ export class ProductInfoService {
       this.email = "MacroManagerInfo@gmail.com";
       this.imageUrls = this.initializeImages();
       this.cards = this.initializeCards();
-      this.downloadUrls = this.initializeDownloads();
+      this.installers = this.initializeInstallers();
     }
 
-    public getDownloads(): string[]{
-      return this.downloadUrls;
+    public getInstallers(): Installer[]{
+      return this.installers;
     }
 
 
@@ -51,9 +53,15 @@ export class ProductInfoService {
       return urls;
     }
 
-    private initializeDownloads(): string[]{
-      var downloads: string[] = [
-        
+    private initializeInstallers(): Installer[]{
+      var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+      var title = 'MacroManager';
+      var version = '1.0.7';
+      var url = downloadsPath + '/MacroManager.DesktopInstaller.msi';
+      var installer1 = new Installer(title + "_v" + version, version, url);
+
+      var downloads: Installer[] = [
+        installer1,
       ]
       return downloads;
     }

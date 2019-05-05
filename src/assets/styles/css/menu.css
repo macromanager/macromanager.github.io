@@ -5,9 +5,6 @@ html, body {
 section {
   padding: 50px 0px; }
 
-.subtitle {
-  font-size: 20px; }
-
 img {
   width: 100%;
   height: auto; }
@@ -15,9 +12,9 @@ img {
 :host(.footer) .nav-list {
   flex-direction: column; }
   :host(.footer) .nav-list .nav-item {
-    margin: 0px;
-    background-color: transparent; }
+    margin: 0px; }
     :host(.footer) .nav-list .nav-item a {
+      background-color: transparent;
       color: white;
       padding: 0px; }
       :host(.footer) .nav-list .nav-item a:hover {
@@ -41,10 +38,15 @@ img {
   padding: 0px;
   margin: 0px; }
   .nav-list .nav-item {
-    background-color: dimgray;
     margin-left: 10px; }
     .nav-list .nav-item a {
+      background-color: dimgray;
       display: block;
       padding: 5px 20px;
       color: white;
-      text-decoration: none; }
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s; }
+      .nav-list .nav-item a:hover {
+        background-color: white;
+        color: #2e302b; }
