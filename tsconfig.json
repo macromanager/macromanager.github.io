@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      // "types": ["node"],
+      "baseUrl": "./",
+      // "paths": {
+      //   "core-js/es7/reflect": [
+      //     "node_modules/core-js/proposals/reflect-metadata"
+      //   ]
+      // },
+      "outDir": "dist",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "experimentalDecorators": true, //angular needs decorators like @Component, @Injectable, etc.
+      "emitDecoratorMetadata": true, //for angular to be able to use metadata we specify in our components.
+      "lib": [
+        "dom",
+        "es2015"
+      ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+
+  }

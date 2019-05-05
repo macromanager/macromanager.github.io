@@ -1,0 +1,22 @@
+@import 'variables';
+.carousel{
+    .slide-wrapper{
+        padding: 0px 40px;
+    }
+    // .carousel-control-next, .carousel-control-prev{
+    //     background-color: gray;
+    // }
+
+    .carousel-icon-wrapper{
+        background-color: black;
+        padding: 8px;
+    }
+
+    .carousel-inner{
+        margin: auto;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    
+}

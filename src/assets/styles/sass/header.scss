@@ -1,0 +1,35 @@
+@import 'global';
+.header-wrapper{
+    background-color: $black;
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0px;
+        .logo{
+            color: $white;
+            font-size: 30px;
+            text-decoration: none;
+        }
+     
+        // .nav-list{
+        //     display: flex;
+        //     list-style: none;
+        //     padding: 0px;
+        //     margin: 0px;
+        //     .nav-item{
+        //         padding: 5px 20px;
+        //         background-color: dimgray;
+        //         margin-left: 10px;
+        //         a{
+        //             color: white;
+        //         }
+        //     }
+    
+        // }
+    }
+    .mobile-menu-wrapper{
+        //background-color: $white;
+        //margin-top: 40px;
+    }
+}
