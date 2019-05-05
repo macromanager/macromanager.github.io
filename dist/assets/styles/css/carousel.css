@@ -1,0 +1,11 @@
+.carousel .slide-wrapper {
+  padding: 0px 40px; }
+
+.carousel .carousel-icon-wrapper {
+  background-color: black;
+  padding: 8px; }
+
+.carousel .carousel-inner {
+  margin: auto;
+  width: 80%;
+  max-width: 600px; }

@@ -1,0 +1,42 @@
+<div class="page-wrapper">
+  <section class="section-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="intro">
+                        <h1> What is Macro Manager? </h1>
+                        <p> MacroManager is a tool that manages scripts written in Visual Basic for Applications (VBA). The desktop application allows users to easily create and distribute packages containing VBA macros to facilitate code reusability. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-cards">
+        <div class="card-collection">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-6" *ngFor="let card of cards">
+                        <card-ui
+                            [card]="card"
+                            >
+                        </card-ui>
+                    </div>                
+                </div>
+            </div>
+
+        </div>
+  </section>
+    
+  <section class="section-carousel">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                    <carousel-ui [slideUrls]="slideUrls">
+                    </carousel-ui>  
+              </div>
+          </div>
+      </div>
+     
+  </section>
+
+</div>
