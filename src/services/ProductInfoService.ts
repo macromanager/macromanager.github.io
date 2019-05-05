@@ -11,6 +11,7 @@ export class ProductInfoService {
     private email: string;
     private imageUrls: string[];
     private cards: Card[];
+    private downloadUrls: string[];
   
     constructor() {
       this.config = new AppConfig;
@@ -18,7 +19,13 @@ export class ProductInfoService {
       this.email = "MacroManagerInfo@gmail.com";
       this.imageUrls = this.initializeImages();
       this.cards = this.initializeCards();
+      this.downloadUrls = this.initializeDownloads();
     }
+
+    public getDownloads(): string[]{
+      return this.downloadUrls;
+    }
+
 
 
     public  getImageUrls(): string[]{
@@ -32,7 +39,7 @@ export class ProductInfoService {
 
 
     private initializeImages(){
-      var imagesPath = this.config.getImagesPath() + '/macro-manager-images';
+      var imagesPath = this.config.getUploadsPath() + '/macro-manager-images';
       var urls = [
         imagesPath + '/macro_packages.png',
         imagesPath + '/macro_macroEditor_properties.png',
@@ -42,6 +49,13 @@ export class ProductInfoService {
         // '/images/macro-manager-images/macro_login.png',
       ]
       return urls;
+    }
+
+    private initializeDownloads(): string[]{
+      var downloads: string[] = [
+        
+      ]
+      return downloads;
     }
 
 

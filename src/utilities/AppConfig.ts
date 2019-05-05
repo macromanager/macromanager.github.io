@@ -8,15 +8,15 @@ export class AppConfig {
     private imagesPath: string;
   
     constructor() { 
-        this.imagesPath = "/images";
+        this.imagesPath = "/uploads";
     }
 
-    public getImagesPath(){
+    public getUploadsPath(){
         return this.imagesPath;
     }
 
     public getImageUrl(fileName){
-        var imagesPath = this.getImagesPath();
+        var imagesPath = this.getUploadsPath();
         var fullpath = imagesPath + '/' + fileName;
         return fullpath;
         
