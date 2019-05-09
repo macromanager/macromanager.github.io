@@ -16,7 +16,11 @@ import { CarouselComponent } from '../components/CarouselComponent';
 
 
 @NgModule({
-    imports: [RouterModule.forRoot(ApplicationRoutes),
+    imports: [RouterModule.forRoot(ApplicationRoutes,
+        {
+            scrollPositionRestoration: 'enabled'
+        }
+    ),
                 BrowserModule,
                 FormsModule],
     declarations: [

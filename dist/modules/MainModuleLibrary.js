@@ -25,7 +25,9 @@ var MainModuleLibrary = /** @class */ (function () {
     }
     MainModuleLibrary = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(ApplicationRoutes_1.ApplicationRoutes),
+            imports: [router_1.RouterModule.forRoot(ApplicationRoutes_1.ApplicationRoutes, {
+                    scrollPositionRestoration: 'enabled'
+                }),
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule],
             declarations: [
