@@ -57,11 +57,18 @@ export class ProductInfoService {
       var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
       var title = 'MacroManager';
       var version = '1.0.7';
-      var url = downloadsPath + '/MacroManager.DesktopInstaller.msi';
+      var url = downloadsPath + '/MacroManager_v1.0.7.msi';
       var installer1 = new Installer(title + "_v" + version, version, url);
 
+      var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+      var title = 'MacroManager';
+      var version = '1.0.8';
+      var url = downloadsPath + '/MacroManager_v1.0.8.msi';
+      var installer2 = new Installer(title + "_v" + version, version, url);
+
+
       var downloads: Installer[] = [
-        installer1,
+        installer2, installer1,
       ]
       return downloads;
     }
