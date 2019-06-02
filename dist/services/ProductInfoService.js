@@ -53,8 +53,15 @@ var ProductInfoService = /** @class */ (function () {
         var version = '1.0.8';
         var url = downloadsPath + '/MacroManager_v1.0.8.msi';
         var installer2 = new Installer_1.Installer(title + "_v" + version, version, url);
+        var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+        var title = 'MacroManager';
+        var version = '1.0.9';
+        var url = downloadsPath + '/MacroManager_v1.0.9.msi';
+        var installer3 = new Installer_1.Installer(title + "_v" + version, version, url);
         var downloads = [
-            installer2, installer1,
+            installer3,
+            installer2,
+            installer1,
         ];
         return downloads;
     };
