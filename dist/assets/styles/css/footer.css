@@ -12,3 +12,5 @@ img {
 .section-footer {
   background-color: #2e302b;
   color: white; }
+  .section-footer .logo-wrapper {
+    max-width: 200px; }

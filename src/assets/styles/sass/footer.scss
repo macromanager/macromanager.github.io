@@ -2,4 +2,7 @@
 .section-footer{
   background-color: $black;
   color: $white;
+  .logo-wrapper{
+    max-width: 200px;
+  }
 }

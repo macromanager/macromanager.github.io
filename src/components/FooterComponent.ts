@@ -1,5 +1,6 @@
 //import {Customer} from '../models/Customer'
 import {Component} from "@angular/core"
+import {ProductInfoService} from "../services/ProductInfoService";
 
 @Component({
     moduleId: module.id,
@@ -9,5 +10,18 @@ import {Component} from "@angular/core"
     styleUrls: ["../assets/styles/css/footer.css"]
 })
 export class FooterComponent {
+    constructor(private prodInfoService: ProductInfoService) {}
+    public logoUrl: string;
+    public email: string;
+
+    ngOnInit() {
+        this.setProps();
+        //this.setCards();
+    }
+ 
+    private setProps(): void {
+        this.logoUrl = this.prodInfoService.getLogoUrl();
+        this.email = this.prodInfoService.getEmail();
+    }
     //CurrentCustomer:Customer = new Customer();
 }

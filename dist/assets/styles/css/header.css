@@ -16,6 +16,8 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 5px 0px; }
+    .header-wrapper .header-content .logo-wrapper {
+      max-width: 200px; }
     .header-wrapper .header-content .logo {
       color: white;
       font-size: 30px;

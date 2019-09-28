@@ -5,8 +5,10 @@
             <div class="col-12">
         
                 <div class='header-content'>
-                    <div class="logo-wrapper"> 
-                        <a (click)="menuClickHandler()" class='logo' [routerLink]="['home']"> MacroManager </a> 
+                    <div class="logo-wrapper">
+                        <a (click)="menuClickHandler()" class='logo' [routerLink]="['home']">
+                            <img src= {{logoUrl}}>
+                        </a> 
                     </div>
                     <button class="d-block d-md-none btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseMobileMenu" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fas fa-bars"></i>

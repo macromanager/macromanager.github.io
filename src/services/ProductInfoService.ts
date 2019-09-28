@@ -10,6 +10,7 @@ import {Installer} from '../models/Installer';
 export class ProductInfoService {
     private config: AppConfig;
     private productName: string;
+    private logoUrl: string;
     private email: string;
     private imageUrls: string[];
     private cards: Card[];
@@ -18,10 +19,19 @@ export class ProductInfoService {
     constructor() {
       this.config = new AppConfig;
       this.productName = "MacroManager";
+      this.logoUrl = this.config.getUploadsPath() + '/macro-manager-images/MacroManager Logo Stacked-light.png';
       this.email = "MacroManagerInfo@gmail.com";
       this.imageUrls = this.initializeImages();
       this.cards = this.initializeCards();
       this.installers = this.initializeInstallers();
+    }
+
+    public getEmail(){
+      return this.email;
+    }
+
+    public getLogoUrl(isDark = true){
+      return this.logoUrl;
     }
 
     public getInstallers(): Installer[]{

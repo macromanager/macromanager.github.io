@@ -17,11 +17,19 @@ var ProductInfoService = /** @class */ (function () {
     function ProductInfoService() {
         this.config = new AppConfig_1.AppConfig;
         this.productName = "MacroManager";
+        this.logoUrl = this.config.getUploadsPath() + '/macro-manager-images/MacroManager Logo Stacked-light.png';
         this.email = "MacroManagerInfo@gmail.com";
         this.imageUrls = this.initializeImages();
         this.cards = this.initializeCards();
         this.installers = this.initializeInstallers();
     }
+    ProductInfoService.prototype.getEmail = function () {
+        return this.email;
+    };
+    ProductInfoService.prototype.getLogoUrl = function (isDark) {
+        if (isDark === void 0) { isDark = true; }
+        return this.logoUrl;
+    };
     ProductInfoService.prototype.getInstallers = function () {
         return this.installers;
     };
