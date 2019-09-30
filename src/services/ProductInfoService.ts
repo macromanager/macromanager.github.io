@@ -19,8 +19,8 @@ export class ProductInfoService {
     constructor() {
       this.config = new AppConfig;
       this.productName = "MacroManager";
-      this.logoUrl = this.config.getUploadsPath() + '/macro-manager-images/MacroManager Logo Stacked-light.png';
-      this.email = "MacroManagerInfo@gmail.com";
+      this.logoUrl = this.config.getUploadsPath() + '/main/MacroManager Logo Stacked-light.png';
+      this.email = "evandsilverstein@gmail.com";
       this.imageUrls = this.initializeImages();
       this.cards = this.initializeCards();
       this.installers = this.initializeInstallers();
