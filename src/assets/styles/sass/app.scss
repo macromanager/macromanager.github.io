@@ -1,8 +1,15 @@
-.app{
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    main{
-        flex-grow: 1
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    .app{
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        main{
+            flex-grow: 1
+        }
     }
 }

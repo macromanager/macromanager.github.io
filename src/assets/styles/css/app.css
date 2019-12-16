@@ -1,6 +1,11 @@
-.app {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column; }
-  .app main {
-    flex-grow: 1; }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }
+  html .app, body .app {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column; }
+    html .app main, body .app main {
+      flex-grow: 1; }

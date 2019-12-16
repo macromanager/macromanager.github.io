@@ -9,5 +9,4 @@ import {Component} from "@angular/core"
     styleUrls: ["../assets/styles/css/app.css"]
 })
 export class AppComponent {
-    //CurrentCustomer:Customer = new Customer();
 }

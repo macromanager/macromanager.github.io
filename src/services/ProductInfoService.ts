@@ -66,28 +66,34 @@ export class ProductInfoService {
     private initializeInstallers(): Installer[]{
       var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
       var title = 'MacroManager';
-      var version = '1.0.7';
-      var url = downloadsPath + '/MacroManager_v1.0.7.msi';
+      var version = '1.1.64.0';
+      var url = downloadsPath + '/MacroManager_v1.1.64.0.msi';
       var installer1 = new Installer(title + "_v" + version, version, url);
 
-      var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
-      var title = 'MacroManager';
-      var version = '1.0.8';
-      var url = downloadsPath + '/MacroManager_v1.0.8.msi';
-      var installer2 = new Installer(title + "_v" + version, version, url);
+      // var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+      // var title = 'MacroManager';
+      // var version = '1.0.7';
+      // var url = downloadsPath + '/MacroManager_v1.0.7.msi';
+      // var installer1 = new Installer(title + "_v" + version, version, url);
+
+      // var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+      // var title = 'MacroManager';
+      // var version = '1.0.8';
+      // var url = downloadsPath + '/MacroManager_v1.0.8.msi';
+      // var installer2 = new Installer(title + "_v" + version, version, url);
 
 
-      var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
-      var title = 'MacroManager';
-      var version = '1.0.9';
-      var url = downloadsPath + '/MacroManager_v1.0.9.msi';
-      var installer3 = new Installer(title + "_v" + version, version, url);
+      // var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+      // var title = 'MacroManager';
+      // var version = '1.0.9';
+      // var url = downloadsPath + '/MacroManager_v1.0.9.msi';
+      // var installer3 = new Installer(title + "_v" + version, version, url);
 
 
       var downloads: Installer[] = [
-        installer3,
-        installer2, 
-        installer1,
+        // installer3,
+        // installer2, 
+        installer1
       ]
       return downloads;
     }
