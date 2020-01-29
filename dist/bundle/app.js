@@ -1424,9 +1424,14 @@ function () {
   ProductInfoService.prototype.initializeInstallers = function () {
     var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
     var title = 'MacroManager';
-    var version = '1.1.68.0';
-    var url = downloadsPath + '/MacroManager_v1.1.68.0.msi';
-    var installer1 = new Installer_1.Installer(title + "_v" + version, version, url); // var title = 'MacroManager';
+    var version = '1.1.69.0';
+    var url = downloadsPath + '/MacroManager_v1.1.69.0.msi';
+    var installer1 = new Installer_1.Installer(title + "_v" + version, version, url); // var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+    // var title = 'MacroManager';
+    // var version = '1.1.68.0';
+    // var url = downloadsPath + '/MacroManager_v1.1.68.0.msi';
+    // var installer1 = new Installer(title + "_v" + version, version, url);
+    // var title = 'MacroManager';
     // var version = '1.1.64.0';
     // var url = downloadsPath + '/MacroManager_v1.1.64.0.msi';
     // var installer1 = new Installer(title + "_v" + version, version, url);
