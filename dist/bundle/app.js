@@ -851,7 +851,7 @@ module.exports = "<div class=\"app\">\r\n    <header>\r\n        <header-ui clas
 
 exports = module.exports = __webpack_require__(59)(false);
 // Module
-exports.push([module.i, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0px;\n  padding: 0px; }\n  html .app, body .app {\n    min-height: 100%;\n    display: flex;\n    flex-direction: column; }\n    html .app main, body .app main {\n      flex-grow: 1; }\n", ""]);
+exports.push([module.i, "html, body {\r\n  width: 100%;\r\n  height: 100%;\r\n  margin: 0px;\r\n  padding: 0px; }\r\n  html .app, body .app {\r\n    min-height: 100%;\r\n    display: flex;\r\n    flex-direction: column; }\r\n    html .app main, body .app main {\r\n      flex-grow: 1; }\r\n", ""]);
 
 
 
@@ -1424,9 +1424,13 @@ function () {
   ProductInfoService.prototype.initializeInstallers = function () {
     var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
     var title = 'MacroManager';
-    var version = '1.1.64.0';
-    var url = downloadsPath + '/MacroManager_v1.1.64.0.msi';
-    var installer1 = new Installer_1.Installer(title + "_v" + version, version, url); // var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
+    var version = '1.1.68.0';
+    var url = downloadsPath + '/MacroManager_v1.1.68.0.msi';
+    var installer1 = new Installer_1.Installer(title + "_v" + version, version, url); // var title = 'MacroManager';
+    // var version = '1.1.64.0';
+    // var url = downloadsPath + '/MacroManager_v1.1.64.0.msi';
+    // var installer1 = new Installer(title + "_v" + version, version, url);
+    // var downloadsPath = this.config.getUploadsPath() + '/macro-manager-installers';
     // var title = 'MacroManager';
     // var version = '1.0.7';
     // var url = downloadsPath + '/MacroManager_v1.0.7.msi';
