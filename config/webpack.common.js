@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
-    'app': './src/startup.ts'
+    'app': './src/startup.ts',
   },
 
   resolve: {
@@ -54,15 +54,6 @@ module.exports = {
     //       use: ['css-loader','postcss-loader','sass-loader']
     //     })
     //   },
-
-      {
-        test: /\.(scss)$/,
-        use: [
-          "style-loader", 
-          "css-loader",
-          "sass-loader"
-        ]
-      },
       {
         test: /\.(css)$/,
         use: [
@@ -71,6 +62,19 @@ module.exports = {
           // "raw-loader"
         ]
       },
+      {
+        test: /\.(scss)$/,
+        use: [
+          "style-loader", 
+          "css-loader",
+          {
+            loader: '"sass-loader"'
+          }
+          
+        ]
+      },
+
+
     //   {
     //     test: /\.css$/,
     //     exclude: helpers.root('src', 'app'),

@@ -11,17 +11,32 @@ import {ProductInfoService} from "../services/ProductInfoService";
     styleUrls: ["../assets/styles/css/downloads.css"]
 })
 export class DownloadsComponent {
-    constructor(private prodInfoService: ProductInfoService) { }
     public installers: Installer[];
+    private productInfoService: ProductInfoService;
 
+    constructor(prodInfoService: ProductInfoService) {
+        this.productInfoService = prodInfoService;
+    }
 
     ngOnInit() {
         this.setDownloads();
-        //this.setCards();
     }
  
     private setDownloads(): void {
-        this.installers = this.prodInfoService.getInstallers();
+        this.productInfoService.getInstallers()
+        .then(installers => {
+            this.installers = installers;
+        })
+    }
+
+    public installerClickHandler(event: any){
+        event.preventDefault();
+        var target = event.target;
+        var version = target.attributes.version.nodeValue;
+        this.productInfoService.DownLoadInstaller(version)
+        // .then(installers => {
+        //     this.installers = installers;
+        // })
     }
 
     // private setCards(): void{

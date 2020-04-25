@@ -1,10 +1,11 @@
 import { Bootstrapper } from '../Bootstrapper';
-import { NgModule }      from '@angular/core'
+import { NgModule, APP_INITIALIZER, Injector } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import {FormsModule} from "@angular/forms"
 import { RouterModule }   from '@angular/router';
 import { ApplicationRoutes }   from '../routes/ApplicationRoutes';  
 import {AppComponent} from '../components/AppComponent'
+
 // import {HomeComponent} from '../components/HomeComponent'
 // import {HeaderComponent} from '../components/HeaderComponent'
 // import {FooterComponent} from '../components/FooterComponent'
@@ -13,6 +14,26 @@ import {AppComponent} from '../components/AppComponent'
 // import { CardComponent } from '../components/CardComponent';
 // import { MenuComponent } from '../components/MenuComponent';
 // import { CarouselComponent } from '../components/CarouselComponent';
+
+export function initializeApp(injector: Injector) {
+    return (): Promise<any> => { 
+        return Bootstrapper.loadAsyncServices(injector)
+        .then(function(){
+            console.log("ini success");
+        }, function(fail){
+            console.log("init fail");
+            console.log(fail);
+        })
+        
+        // console.log("run my async loader");
+        // return Promise.resolve()
+        // .then(()=>{
+        //     var client = injector.get(GateKeeperClient);
+        //     client.Connect();
+        // })    
+    }
+  }
+
 
 @NgModule({
     
@@ -37,6 +58,14 @@ import {AppComponent} from '../components/AppComponent'
     declarations: Bootstrapper.components.map((mod) => {
         return mod['mod'];
     }),
+    providers: [
+        {
+          provide: APP_INITIALIZER,
+          useFactory: initializeApp,
+          multi: true,
+          deps: [Injector]
+        }
+    ],
     bootstrap: [AppComponent]
 })
 export class MainModuleLibrary { }

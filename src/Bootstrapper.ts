@@ -1,5 +1,8 @@
 import {IocRegistrations} from "./IocRegistrations";
 import {createContainer, AwilixContainer} from 'awilix';
+import {Injector} from '@angular/core';
+import {GateKeeperClient} from './utilities/GateKeeperClient';
+
 
 export class Bootstrapper {
     public static container: AwilixContainer;
@@ -10,6 +13,16 @@ export class Bootstrapper {
         this.components = [];
         IocRegistrations.loadServices(this.container);
         this.components = IocRegistrations.loadComponents(this.container);
+    }
+
+    public static loadAsyncServices(injector: Injector){
+        console.log("run my async loader");
+        return Promise.resolve()
+        .then(()=>{
+            var client = injector.get(GateKeeperClient);
+            console.log("run my connect fxn");
+            return client.Connect();
+        })
     }
 
     public static getInstanceByString(typeName: string) {

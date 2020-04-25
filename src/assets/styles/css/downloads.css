@@ -18,5 +18,9 @@ img {
 .page-wrapper p {
   max-width: 700px; }
 
+.page-wrapper .installers a {
+  color: #007bff;
+  cursor: pointer; }
+
 .page-wrapper .section-example {
   background-color: #f4f4f4; }
