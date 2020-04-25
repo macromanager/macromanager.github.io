@@ -14,7 +14,8 @@ export class GateKeeperClient {
     private customHeaders: object
   
     constructor() { 
-        this.baseUrl = "http://localhost:61011/";        
+        //this.baseUrl = "http://localhost:61011/";
+        this.baseUrl = 'https://evanapps-connectionmanager.azurewebsites.net/';
     }
 
     public Connect(){
