@@ -1,11 +1,15 @@
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px; }
-  html .app, body .app {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column; }
-    html .app main, body .app main {
-      flex-grow: 1; }
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  .app main {
+    flex-grow: 1;
+    position: relative; }
+    .app main splashscreen-ui {
+      position: absolute;
+      z-index: 1000;
+      top: 0px;
+      bottom: 0px;
+      width: 100%; }
+      .app main splashscreen-ui .splash-screen, .app main splashscreen-ui .content-wrapper {
+        height: 100%; }

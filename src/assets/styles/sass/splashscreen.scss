@@ -5,26 +5,25 @@
     }
     .content-wrapper{
         display: flex;
-        justify-content: center;    
-        height: 100%;
-        width: 100%;
+        justify-content: center;
+        align-items: center; 
         opacity: 0.4;
     }
     .size-large{
         background: gainsboro;
-        padding: 20px;
         .img-wrapper{
             height: 100px;
         }
     }
-
     .size-small{
-        padding: 2px;
         .img-wrapper{
             height: 20px;
         }
     }
 }
 
-
-// [hidden] { display: none !important;}
+.displayType-absolute{
+    &, .content-wrapper{
+        height: 100%;
+    }
+}

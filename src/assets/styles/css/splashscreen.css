@@ -5,17 +5,16 @@
 .splash-screen .content-wrapper {
   display: flex;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  align-items: center;
   opacity: 0.4; }
 
 .splash-screen .size-large {
-  background: gainsboro;
-  padding: 20px; }
+  background: gainsboro; }
   .splash-screen .size-large .img-wrapper {
     height: 100px; }
 
-.splash-screen .size-small {
-  padding: 2px; }
-  .splash-screen .size-small .img-wrapper {
-    height: 20px; }
+.splash-screen .size-small .img-wrapper {
+  height: 20px; }
+
+.displayType-absolute, .displayType-absolute .content-wrapper {
+  height: 100%; }

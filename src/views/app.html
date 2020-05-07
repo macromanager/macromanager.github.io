@@ -3,6 +3,7 @@
         <header-ui class='header'></header-ui>
     </header>
     <main>
+        <splashscreen-ui id="appSplash" [displayType]="'absolute'" [size]="'large'" [hidden]="!isBusy"></splashscreen-ui>
         <router-outlet></router-outlet>
     </main>
     <footer>

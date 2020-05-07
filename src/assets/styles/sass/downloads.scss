@@ -1,5 +1,13 @@
 @import 'global';
 .page-wrapper{
+    // .content{
+    //     display: flex;
+    //     flex-direction: column;
+    //     .content-body{
+    //         flex-grow: 1;
+    //     }
+    // }
+
     .subtitle{
         text-decoration: underline;
     }
@@ -11,8 +19,14 @@
     .installers{
         li{
             .item-wrapper{
-                display: flex;
-                align-items: center;
+                vertical-align: middle;
+
+                & > *{
+                    display: inline-block;
+                    
+                }
+                // display: flex;
+                // align-items: center;
             }
         }
         a{
@@ -23,9 +37,5 @@
         .img-wrapper{
             height: 20px !important;
         }
-        splashscreen-ui{
-            max-width: 400px;
-        }
     }
-
 }

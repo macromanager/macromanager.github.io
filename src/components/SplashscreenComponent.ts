@@ -11,7 +11,8 @@ import {ProductInfoService} from "../services/ProductInfoService";
     styleUrls: ["../assets/styles/css/splashscreen.css"]
 })
 export class SplashscreenComponent {
-    @Input() size: string;
+    @Input() size: string = "large";
+    @Input() displayType: string = "block";
 
     constructor(productInfoService: ProductInfoService) {
         this.prodInfoService = productInfoService
@@ -35,10 +36,4 @@ export class SplashscreenComponent {
     private setSpinnerUrl(): void {
         this.spinnerImgUrl = this.prodInfoService.getSpinnerUrl();
     }
-
-    // private setSplashscreenVisibility(isVisible: boolean): void{
-    //     var splash = document.getElementsByClassName('splash-container')[0];
-    //     splash.classList.remove("hide");
-    //     if(!isVisible){ splash.classList.add("hide"); }
-    // }
 }

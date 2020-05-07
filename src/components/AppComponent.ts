@@ -1,5 +1,5 @@
-import {Component} from "@angular/core"
-//import {HeaderComponent} from './HeaderComponent'
+import {Component} from "@angular/core";
+import {AppSplashScreenManager} from "../utilities/AppSplashScreenManager";
 
 @Component({
     moduleId: module.id,
@@ -9,4 +9,18 @@ import {Component} from "@angular/core"
     styleUrls: ["../assets/styles/css/app.css"]
 })
 export class AppComponent {
+    private splashManager: AppSplashScreenManager;
+    public isBusy: boolean = false;
+
+    constructor(splashScreenManager: AppSplashScreenManager) {
+        this.splashManager = splashScreenManager;
+        this.splashManager.SetSplashScreenRequestHandler(this.SetBusyIndicator.bind(this));
+    }
+
+    private SetBusyIndicator(isVisible: boolean): void {
+        this.isBusy = isVisible;  
+    }
+
+
+
 }

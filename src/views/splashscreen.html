@@ -1,7 +1,7 @@
-<div [ngClass]="['splash-screen']">
+<div [ngClass]="['splash-screen', 'displayType-' + displayType]">
     <div [ngClass]="['content-wrapper', 'size-' + size]">
         <div class='img-wrapper'>
-            <img src = {{spinnerImgUrl}}>
+            <img src={{spinnerImgUrl}}>
         </div>
     </div>
 </div>

@@ -24,7 +24,6 @@ export class ProductInfoService {
       this.gateKeeperClient = client;
       this.config = new AppConfig;
       this.productName = "MacroManager";
-      this.logoUrl = this.config.getUploadsPath() + '/main/MacroManager Logo Stacked-light.png';
       this.email = "evandsilverstein@gmail.com";
       this.imageUrls = this.initializeImages();
       this.cards = this.initializeCards();
@@ -35,11 +34,11 @@ export class ProductInfoService {
     }
 
     public getLogoUrl(isDark = true): string{
-      return this.logoUrl;
+      return this.config.getUploadsPath() + '/main/MacroManager Logo Stacked-light.png';
     }
 
     public getSpinnerUrl(): string{
-      return this.logoUrl = this.config.getUploadsPath() + '/main/spinner-circle.gif';
+      return this.config.getUploadsPath() + '/main/spinner-circle.gif';
     }
 
     public getInstallers(){

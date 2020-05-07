@@ -1,6 +1,8 @@
 import {Component} from "@angular/core"
 import {Installer} from "../models/Installer"
 import {ProductInfoService} from "../services/ProductInfoService";
+import {AppSplashScreenManager} from "../utilities/AppSplashScreenManager";
+
 
 
 @Component({
@@ -12,12 +14,13 @@ import {ProductInfoService} from "../services/ProductInfoService";
 })
 export class DownloadsComponent {
     public installers: Installer[];
-    public isBusy: boolean = true;
     private productInfoService: ProductInfoService;
+    private appSplashScreenManager: AppSplashScreenManager;
     
 
-    constructor(prodInfoService: ProductInfoService) {
+    constructor(prodInfoService: ProductInfoService, appSplashScreenManager: AppSplashScreenManager) {
         this.productInfoService = prodInfoService;
+        this.appSplashScreenManager = appSplashScreenManager;
     }
 
     ngOnInit() {
@@ -25,11 +28,12 @@ export class DownloadsComponent {
     }
  
     private setDownloads(): void {
+        this.appSplashScreenManager.requestSplashScreen(true);
         this.productInfoService.getInstallers()
         .then(installers => {
-            // this.setSplashscreenVisibility(false);
-            this.isBusy = false;
             this.installers = installers;
+            this.appSplashScreenManager.requestSplashScreen(false);
+
         })
     }
 
