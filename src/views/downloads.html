@@ -7,14 +7,19 @@
                     <p>
                         This application is currently in the beta testing phase.
                     </p>
-                    <ul class="installers">
-                        <li *ngFor="let installer of installers">
-                            <a (click)="installerClickHandler($event)" class="installer" attr.version="{{installer.version}}">
-                                {{installer.title}} {{installer.version}}
-                            </a>
-                        </li>
-                    </ul>
-                 
+                    <div class="installers-container">
+                        <splashscreen-ui [size]="'large'" [hidden]="!isBusy"></splashscreen-ui>
+                        <ul class="installers">
+                            <li *ngFor="let installer of installers">
+                                <div class="item-wrapper">
+                                    <a (click)="installerClickHandler($event)" class="installer" attr.version="{{installer.version}}">
+                                        {{installer.title}} {{installer.version}}
+                                    </a>
+                                    <splashscreen-ui [size]="'small'" [hidden]="true" ></splashscreen-ui>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

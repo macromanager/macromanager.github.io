@@ -34,8 +34,12 @@ export class ProductInfoService {
       return this.email;
     }
 
-    public getLogoUrl(isDark = true){
+    public getLogoUrl(isDark = true): string{
       return this.logoUrl;
+    }
+
+    public getSpinnerUrl(): string{
+      return this.logoUrl = this.config.getUploadsPath() + '/main/spinner-circle.gif';
     }
 
     public getInstallers(){

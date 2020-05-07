@@ -16,11 +16,9 @@ export class Bootstrapper {
     }
 
     public static loadAsyncServices(injector: Injector){
-        console.log("run my async loader");
         return Promise.resolve()
         .then(()=>{
             var client = injector.get(GateKeeperClient);
-            console.log("run my connect fxn");
             return client.Connect();
         })
     }

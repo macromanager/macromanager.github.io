@@ -5,6 +5,12 @@ html, body {
 section {
   padding: 50px 0px; }
 
+.title {
+  font-size: 30px; }
+
+.title {
+  margin-bottom: 10px; }
+
 img {
   width: 100%;
   height: auto; }

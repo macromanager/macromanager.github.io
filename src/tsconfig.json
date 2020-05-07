@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "target": "es5",
       // "types": ["node"],
       "baseUrl": "./",
       // "paths": {
@@ -13,8 +14,9 @@
       "experimentalDecorators": true, //angular needs decorators like @Component, @Injectable, etc.
       "emitDecoratorMetadata": true, //for angular to be able to use metadata we specify in our components.
       "lib": [
+        "ES5",
         "dom",
-        "es2015"
+        // "es2015"
       ],
       "typeRoots": ["node_modules/@types"],
       "types": [

@@ -5,6 +5,12 @@ html, body {
 section {
   padding: 50px 0px; }
 
+.title {
+  font-size: 30px; }
+
+.title {
+  margin-bottom: 10px; }
+
 img {
   width: 100%;
   height: auto; }
@@ -12,15 +18,20 @@ img {
 .page-wrapper .subtitle {
   text-decoration: underline; }
 
-.page-wrapper .title {
-  margin-bottom: 20px; }
-
 .page-wrapper p {
   max-width: 700px; }
 
+.page-wrapper .installers li .item-wrapper {
+  display: flex;
+  align-items: center; }
+
 .page-wrapper .installers a {
   color: #007bff;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-right: 5px; }
 
-.page-wrapper .section-example {
-  background-color: #f4f4f4; }
+.page-wrapper .installers .img-wrapper {
+  height: 20px !important; }
+
+.page-wrapper .installers splashscreen-ui {
+  max-width: 400px; }

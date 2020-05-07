@@ -12,7 +12,9 @@ import {ProductInfoService} from "../services/ProductInfoService";
 })
 export class DownloadsComponent {
     public installers: Installer[];
+    public isBusy: boolean = true;
     private productInfoService: ProductInfoService;
+    
 
     constructor(prodInfoService: ProductInfoService) {
         this.productInfoService = prodInfoService;
@@ -25,24 +27,26 @@ export class DownloadsComponent {
     private setDownloads(): void {
         this.productInfoService.getInstallers()
         .then(installers => {
+            // this.setSplashscreenVisibility(false);
+            this.isBusy = false;
             this.installers = installers;
         })
     }
 
+
+
     public installerClickHandler(event: any){
         event.preventDefault();
         var target = event.target;
+        var parent = target.parentElement;
+        var splash = parent.getElementsByTagName("splashscreen-ui")[0];        
+        splash.removeAttribute("hidden");
+
         var version = target.attributes.version.nodeValue;
         this.productInfoService.DownLoadInstaller(version)
-        // .then(installers => {
-        //     this.installers = installers;
-        // })
-    }
+        .then(function(){
+            splash.setAttribute("hidden", true);
+        })
 
-    // private setCards(): void{
-    //     this.cards = this.prodInfoService.getCards();
-    // }
-
- 
-    
+    }    
 }

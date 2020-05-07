@@ -12,6 +12,11 @@ section{
     // text-decoration: none;
 
 // }
+.title{
+    @extend %title-font-size;
+    @extend %title-space;
+}
+
 %title-font-size{
     font-size: 30px;
 }
@@ -22,7 +27,7 @@ section{
 }
 
 %title-space{
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 
@@ -33,4 +38,5 @@ img{
     width: 100%;
     height: auto;
 }
+
 

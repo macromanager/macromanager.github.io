@@ -5,11 +5,11 @@ html, body {
 section {
   padding: 50px 0px; }
 
-.section-intro .intro .title {
+.title {
   font-size: 30px; }
 
-.section-intro .intro .title {
-  margin-bottom: 25px; }
+.title {
+  margin-bottom: 10px; }
 
 img {
   width: 100%;
@@ -24,6 +24,8 @@ img {
   text-align: center;
   max-width: 700px;
   margin: 0px auto; }
+  .section-intro .intro .title {
+    margin-bottom: 15px; }
 
 .section-cards {
   background-color: #f4f4f4; }

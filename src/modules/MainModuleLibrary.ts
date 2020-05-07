@@ -5,6 +5,7 @@ import {FormsModule} from "@angular/forms"
 import { RouterModule }   from '@angular/router';
 import { ApplicationRoutes }   from '../routes/ApplicationRoutes';  
 import {AppComponent} from '../components/AppComponent'
+import { promises } from 'fs';
 
 // import {HomeComponent} from '../components/HomeComponent'
 // import {HeaderComponent} from '../components/HeaderComponent'
@@ -16,21 +17,15 @@ import {AppComponent} from '../components/AppComponent'
 // import { CarouselComponent } from '../components/CarouselComponent';
 
 export function initializeApp(injector: Injector) {
-    return (): Promise<any> => { 
-        return Bootstrapper.loadAsyncServices(injector)
-        .then(function(){
-            console.log("ini success");
-        }, function(fail){
-            console.log("init fail");
-            console.log(fail);
-        })
-        
-        // console.log("run my async loader");
-        // return Promise.resolve()
-        // .then(()=>{
-        //     var client = injector.get(GateKeeperClient);
-        //     client.Connect();
-        // })    
+    return (): Promise<any> => {
+        return Promise.resolve(); 
+        // return Bootstrapper.loadAsyncServices(injector)
+        // .then(function(){
+        //     console.log("ini success");
+        // }, function(fail){
+        //     console.log("init fail");
+        //     console.log(fail);
+        // })   
     }
   }
 

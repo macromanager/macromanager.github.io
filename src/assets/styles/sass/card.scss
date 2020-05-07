@@ -1,14 +1,10 @@
-@import 'variables';
+@import 'global';
 .my-card{
     text-align: center;
     box-shadow: $boxShadow;
     padding: 20px;
     margin: 10px;
     background-color: $white;
-    
-    .header{
-        margin-bottom: 20px;
-    }
     width: 100%;
 }
 :host{
