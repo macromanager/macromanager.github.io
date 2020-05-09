@@ -8,7 +8,7 @@ import {ProductInfoService} from "../services/ProductInfoService";
     //moduleId: __moduleName,
     selector: "home-page-ui",
     templateUrl: "../views/home.html",
-    styleUrls: ["../assets/styles/css/home.css"]
+    styleUrls: ["../assets/styles/home.scss"]
 })
 export class HomeComponent {
     constructor(private prodInfoService: ProductInfoService) { }

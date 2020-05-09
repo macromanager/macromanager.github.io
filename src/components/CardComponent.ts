@@ -6,7 +6,7 @@ import {Card} from '../models/Card'
     //moduleId: __moduleName,
     selector: "card-ui",
     templateUrl: "../views/card.html",
-    styleUrls: ["../assets/styles/css/card.css"]
+    styleUrls: ["../assets/styles/card.scss"]
 })
 export class CardComponent {
     //card: Card = new Card('test', 'test description');

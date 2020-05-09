@@ -6,7 +6,7 @@ import {Component} from "@angular/core"
     //moduleId: __moduleName,
     selector: "learn-page-ui",
     templateUrl: "../views/learn.html",
-    styleUrls: ["../assets/styles/css/learn.css"]
+    styleUrls: ["../assets/styles/learn.scss"]
 })
 export class LearnComponent {
     

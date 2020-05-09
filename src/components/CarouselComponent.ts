@@ -6,7 +6,7 @@ import {Card} from '../models/Card'
     //moduleId: __moduleName,
     selector: "carousel-ui",
     templateUrl: "../views/carousel.html",
-    styleUrls: ["../assets/styles/css/carousel.css"]
+    styleUrls: ["../assets/styles/carousel.scss"]
 })
 export class CarouselComponent {
     //card: Card = new Card('test', 'test description');

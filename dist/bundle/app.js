@@ -37,9 +37,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 
@@ -90,9 +88,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 
@@ -167,9 +163,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 
@@ -223,9 +217,7 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
   return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 
@@ -254,9 +246,7 @@ exports.LearnComponent = LearnComponent;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var IocRegistrations_1 = __webpack_require__(515);
 
@@ -316,9 +306,7 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
   return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 
@@ -365,9 +353,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 
@@ -378,7 +364,7 @@ var CardComponent =
 function () {
   function CardComponent() {}
 
-  __decorate([core_1.Input(), __metadata("design:type", Card_1.Card)], CardComponent.prototype, "card", void 0);
+  __decorate([core_1.Input(), __metadata("design:type", Card_1.Card)], CardComponent.prototype, "card");
 
   CardComponent = __decorate([core_1.Component({
     
@@ -400,9 +386,7 @@ exports.CardComponent = CardComponent;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var Card =
 /** @class */
@@ -447,9 +431,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 
@@ -472,7 +454,7 @@ function () {
       var activeClass = index === 0 ? 'active' : '';
       var className = "carousel-item " + activeClass;
       var slide = {
-        class: className,
+        "class": className,
         alt: index,
         src: val
       };
@@ -481,7 +463,7 @@ function () {
     return slides;
   };
 
-  __decorate([core_1.Input(), __metadata("design:type", Array)], CarouselComponent.prototype, "slideUrls", void 0);
+  __decorate([core_1.Input(), __metadata("design:type", Array)], CarouselComponent.prototype, "slideUrls");
 
   CarouselComponent = __decorate([core_1.Component({
     
@@ -511,9 +493,7 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
   return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var Customer_1 = __webpack_require__(528);
 
@@ -557,9 +537,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var axios_1 = __webpack_require__(531);
 
@@ -579,7 +557,7 @@ function () {
     var _this = this;
 
     var url = this.baseUrl + "/api/connections";
-    return axios_1.default.get(url).then(function (response) {
+    return axios_1["default"].get(url).then(function (response) {
       var connections = response.data;
       return connections;
     }).then(function (connections) {
@@ -607,7 +585,7 @@ function () {
     var connectPromise = this.queryUrl == "" ? this.Connect() : Promise.resolve();
     return connectPromise.then(function () {
       var url = _this.queryUrl + "/" + queryName;
-      return axios_1.default.post(url, query, {
+      return axios_1["default"].post(url, query, {
         headers: _this.customHeaders
       });
     }).then(function (response) {
@@ -643,9 +621,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-}); //import {Customer} from '../models/Customer'
+exports.__esModule = true; //import {Customer} from '../models/Customer'
 
 var core_1 = __webpack_require__(1);
 
@@ -699,9 +675,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-}); //import {Customer} from '../models/Customer'
+exports.__esModule = true; //import {Customer} from '../models/Customer'
 
 var core_1 = __webpack_require__(1);
 
@@ -760,9 +734,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-}); //import {Customer} from '../models/Customer'
+exports.__esModule = true; //import {Customer} from '../models/Customer'
 
 var core_1 = __webpack_require__(1);
 
@@ -781,7 +753,7 @@ function () {
     this.navigationEvent.emit(destination);
   };
 
-  __decorate([core_1.Output(), __metadata("design:type", Object)], MenuComponent.prototype, "navigationEvent", void 0);
+  __decorate([core_1.Output(), __metadata("design:type", Object)], MenuComponent.prototype, "navigationEvent");
 
   MenuComponent = __decorate([core_1.Component({
     
@@ -815,9 +787,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 
@@ -846,9 +816,9 @@ function () {
     this.spinnerImgUrl = this.prodInfoService.getSpinnerUrl();
   };
 
-  __decorate([core_1.Input(), __metadata("design:type", String)], SplashscreenComponent.prototype, "size", void 0);
+  __decorate([core_1.Input(), __metadata("design:type", String)], SplashscreenComponent.prototype, "size");
 
-  __decorate([core_1.Input(), __metadata("design:type", String)], SplashscreenComponent.prototype, "displayType", void 0);
+  __decorate([core_1.Input(), __metadata("design:type", String)], SplashscreenComponent.prototype, "displayType");
 
   SplashscreenComponent = __decorate([core_1.Component({
     
@@ -870,9 +840,7 @@ exports.SplashscreenComponent = SplashscreenComponent;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 __webpack_require__(189);
 
@@ -900,9 +868,7 @@ platform.bootstrapModule(MainModuleLibrary_1.MainModuleLibrary);
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var ModuleLoader_1 = __webpack_require__(516);
 
@@ -1009,9 +975,7 @@ exports.IocRegistrations = IocRegistrations; // const ctx = require.context('./s
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var path = __webpack_require__(517);
 
@@ -1125,7 +1089,7 @@ module.exports = "<div class=\"app\">\r\n    <header>\r\n        <header-ui clas
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, ".app {\n  display: flex;\n  flex-direction: column;\n  height: 100vh; }\n  .app main {\n    flex-grow: 1;\n    position: relative; }\n    .app main splashscreen-ui {\n      position: absolute;\n      z-index: 1000;\n      top: 0px;\n      bottom: 0px;\n      width: 100%; }\n      .app main splashscreen-ui .splash-screen, .app main splashscreen-ui .content-wrapper {\n        height: 100%; }\n", ""]);
+exports.push([module.i, ".app{display:flex;flex-direction:column;height:100vh}.app main{flex-grow:1;position:relative}.app main splashscreen-ui{position:absolute;z-index:1000;top:0px;bottom:0px;width:100%}.app main splashscreen-ui .splash-screen,.app main splashscreen-ui .content-wrapper{height:100%}\n", ""]);
 
 
 
@@ -1158,7 +1122,7 @@ module.exports = "<div class='my-card'>\r\n    <div class='img-wrapper'>\r\n    
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 14px;\n  background-color: white; }\n\nsection {\n  padding: 50px 0px; }\n\n.title {\n  font-size: 30px; }\n\n.title {\n  margin-bottom: 10px; }\n\nimg {\n  width: 100%;\n  height: auto; }\n\n.my-card {\n  text-align: center;\n  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.06);\n  padding: 20px;\n  margin: 10px;\n  background-color: white;\n  width: 100%; }\n\n:host {\n  display: flex;\n  flex-grow: 1; }\n", ""]);
+exports.push([module.i, "html,body{width:100%;height:100%;margin:0px;padding:0px;font-size:14px;background-color:#fff}section{padding:50px 0px}.title{font-size:30px}.title{margin-bottom:10px}img{width:100%;height:auto}.my-card{text-align:center;box-shadow:0 8px 10px 0 rgba(0,0,0,0.06);padding:20px;margin:10px;background-color:#fff;width:100%}:host{display:flex;flex-grow:1}\n", ""]);
 
 
 
@@ -1191,7 +1155,7 @@ module.exports = "<div id=\"carouselExampleControls\" class=\"carousel slide\" d
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, ".carousel .slide-wrapper {\n  padding: 0px 40px; }\n\n.carousel .carousel-icon-wrapper {\n  background-color: black;\n  padding: 8px; }\n\n.carousel .carousel-inner {\n  margin: auto;\n  width: 80%;\n  max-width: 600px; }\n", ""]);
+exports.push([module.i, ".carousel .slide-wrapper{padding:0px 40px}.carousel .carousel-icon-wrapper{background-color:black;padding:8px}.carousel .carousel-inner{margin:auto;width:80%;max-width:600px}\n", ""]);
 
 
 
@@ -1203,9 +1167,7 @@ exports.push([module.i, ".carousel .slide-wrapper {\n  padding: 0px 40px; }\n\n.
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var Customer =
 /** @class */
@@ -1236,9 +1198,7 @@ module.exports = "<div class=\"customer\">\r\n    Name:\r\n    <input type=\"tex
 "use strict";
  //import { Injectable } from '@angular/core';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-}); // @Injectable({
+exports.__esModule = true; // @Injectable({
 //   providedIn: 'root',
 // })
 
@@ -1272,9 +1232,7 @@ exports.AppConfig = AppConfig;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var Installer =
 /** @class */
@@ -1328,7 +1286,7 @@ module.exports = "<div class=\"page-wrapper\">\r\n    <section class=\"section-d
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 14px;\n  background-color: white; }\n\nsection {\n  padding: 50px 0px; }\n\n.title {\n  font-size: 30px; }\n\n.title {\n  margin-bottom: 10px; }\n\nimg {\n  width: 100%;\n  height: auto; }\n\n.page-wrapper .subtitle {\n  text-decoration: underline; }\n\n.page-wrapper p {\n  max-width: 700px; }\n\n.page-wrapper .installers li .item-wrapper {\n  vertical-align: middle; }\n  .page-wrapper .installers li .item-wrapper > * {\n    display: inline-block; }\n\n.page-wrapper .installers a {\n  color: #007bff;\n  cursor: pointer;\n  margin-right: 5px; }\n\n.page-wrapper .installers .img-wrapper {\n  height: 20px !important; }\n", ""]);
+exports.push([module.i, "html,body{width:100%;height:100%;margin:0px;padding:0px;font-size:14px;background-color:#fff}section{padding:50px 0px}.title{font-size:30px}.title{margin-bottom:10px}img{width:100%;height:auto}.page-wrapper .subtitle{text-decoration:underline}.page-wrapper p{max-width:700px}.page-wrapper .installers li .item-wrapper{vertical-align:middle}.page-wrapper .installers li .item-wrapper>*{display:inline-block}.page-wrapper .installers a{color:#007bff;cursor:pointer;margin-right:5px}.page-wrapper .installers .img-wrapper{height:20px !important}\n", ""]);
 
 
 
@@ -1361,7 +1319,7 @@ module.exports = "<div class=\"footer-wrapper\">\r\n    <section class=\"section
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 14px;\n  background-color: white; }\n\nsection {\n  padding: 50px 0px; }\n\n.title {\n  font-size: 30px; }\n\n.title {\n  margin-bottom: 10px; }\n\nimg {\n  width: 100%;\n  height: auto; }\n\n.section-footer {\n  background-color: #2e302b;\n  color: white; }\n  .section-footer .logo-wrapper {\n    max-width: 200px; }\n", ""]);
+exports.push([module.i, "html,body{width:100%;height:100%;margin:0px;padding:0px;font-size:14px;background-color:#fff}section{padding:50px 0px}.title{font-size:30px}.title{margin-bottom:10px}img{width:100%;height:auto}.section-footer{background-color:#2e302b;color:#fff}.section-footer .logo-wrapper{max-width:200px}\n", ""]);
 
 
 
@@ -1394,7 +1352,7 @@ module.exports = "\r\n<div class=\"header-wrapper\">\r\n    <div class=\"contain
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 14px;\n  background-color: white; }\n\nsection {\n  padding: 50px 0px; }\n\n.title {\n  font-size: 30px; }\n\n.title {\n  margin-bottom: 10px; }\n\nimg {\n  width: 100%;\n  height: auto; }\n\n.header-wrapper {\n  background-color: #2e302b; }\n  .header-wrapper .header-content {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 5px 0px; }\n    .header-wrapper .header-content .logo-wrapper {\n      max-width: 200px; }\n    .header-wrapper .header-content .logo {\n      color: white;\n      font-size: 30px;\n      text-decoration: none; }\n", ""]);
+exports.push([module.i, "html,body{width:100%;height:100%;margin:0px;padding:0px;font-size:14px;background-color:#fff}section{padding:50px 0px}.title{font-size:30px}.title{margin-bottom:10px}img{width:100%;height:auto}.header-wrapper{background-color:#2e302b}.header-wrapper .header-content{display:flex;justify-content:space-between;align-items:center;padding:5px 0px}.header-wrapper .header-content .logo-wrapper{max-width:200px}.header-wrapper .header-content .logo{color:#fff;font-size:30px;text-decoration:none}\n", ""]);
 
 
 
@@ -1427,7 +1385,7 @@ module.exports = "<div class=\"page-wrapper\">\r\n  <section class=\"section-int
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 14px;\n  background-color: white; }\n\nsection {\n  padding: 50px 0px; }\n\n.title {\n  font-size: 30px; }\n\n.title {\n  margin-bottom: 10px; }\n\nimg {\n  width: 100%;\n  height: auto; }\n\n.card-collection {\n  display: flex; }\n  .card-collection [class*=col-] {\n    display: flex; }\n\n.section-intro .intro {\n  text-align: center;\n  max-width: 700px;\n  margin: 0px auto; }\n  .section-intro .intro .title {\n    margin-bottom: 15px; }\n\n.section-cards {\n  background-color: #f4f4f4; }\n", ""]);
+exports.push([module.i, "html,body{width:100%;height:100%;margin:0px;padding:0px;font-size:14px;background-color:#fff}section{padding:50px 0px}.title{font-size:30px}.title{margin-bottom:10px}img{width:100%;height:auto}.card-collection{display:flex}.card-collection [class*=col-]{display:flex}.section-intro .intro{text-align:center;max-width:700px;margin:0px auto}.section-intro .intro .title{margin-bottom:15px}.section-cards{background-color:#f4f4f4}\n", ""]);
 
 
 
@@ -1460,7 +1418,7 @@ module.exports = "<div class=\"page-wrapper\">\r\n    <!-- <section class=\"sect
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 14px;\n  background-color: white; }\n\nsection {\n  padding: 50px 0px; }\n\n.title {\n  font-size: 30px; }\n\n.title {\n  margin-bottom: 10px; }\n\nimg {\n  width: 100%;\n  height: auto; }\n\n.page-wrapper .subtitle {\n  text-decoration: underline; }\n\n.page-wrapper .title {\n  margin-bottom: 20px; }\n\n.page-wrapper p {\n  max-width: 700px; }\n\n.page-wrapper .section-example {\n  background-color: #f4f4f4; }\n", ""]);
+exports.push([module.i, "html,body{width:100%;height:100%;margin:0px;padding:0px;font-size:14px;background-color:#fff}section{padding:50px 0px}.title{font-size:30px}.title{margin-bottom:10px}img{width:100%;height:auto}.page-wrapper .subtitle{text-decoration:underline}.page-wrapper .title{margin-bottom:20px}.page-wrapper p{max-width:700px}.page-wrapper .section-example{background-color:#f4f4f4}\n", ""]);
 
 
 
@@ -1493,7 +1451,7 @@ module.exports = "<nav class='main-nav'>\r\n    <ul class=\"nav-list\">\r\n     
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  font-size: 14px;\n  background-color: white; }\n\nsection {\n  padding: 50px 0px; }\n\n.title {\n  font-size: 30px; }\n\n.title {\n  margin-bottom: 10px; }\n\nimg {\n  width: 100%;\n  height: auto; }\n\n:host(.footer) .nav-list {\n  flex-direction: column; }\n  :host(.footer) .nav-list .nav-item {\n    margin: 0px; }\n    :host(.footer) .nav-list .nav-item a {\n      background-color: transparent;\n      color: white;\n      padding: 0px; }\n      :host(.footer) .nav-list .nav-item a:hover {\n        text-decoration: underline; }\n\n:host(.mobile) .nav-list {\n  height: 100vh;\n  width: 100%;\n  flex-direction: column; }\n  :host(.mobile) .nav-list .nav-item {\n    margin: 0px;\n    padding: 0px;\n    margin-bottom: 5px; }\n    :host(.mobile) .nav-list .nav-item a {\n      display: block;\n      padding: 5px 20px; }\n\n.nav-list {\n  display: flex;\n  list-style: none;\n  padding: 0px;\n  margin: 0px; }\n  .nav-list .nav-item {\n    margin-left: 10px; }\n    .nav-list .nav-item a {\n      background-color: dimgray;\n      display: block;\n      padding: 5px 20px;\n      color: white;\n      text-decoration: none;\n      font-weight: 500;\n      transition: background-color 0.3s; }\n      .nav-list .nav-item a:hover {\n        background-color: white;\n        color: #2e302b; }\n", ""]);
+exports.push([module.i, "html,body{width:100%;height:100%;margin:0px;padding:0px;font-size:14px;background-color:#fff}section{padding:50px 0px}.title{font-size:30px}.title{margin-bottom:10px}img{width:100%;height:auto}:host(.footer) .nav-list{flex-direction:column}:host(.footer) .nav-list .nav-item{margin:0px}:host(.footer) .nav-list .nav-item a{background-color:transparent;color:white;padding:0px}:host(.footer) .nav-list .nav-item a:hover{text-decoration:underline}:host(.mobile) .nav-list{height:100vh;width:100%;flex-direction:column}:host(.mobile) .nav-list .nav-item{margin:0px;padding:0px;margin-bottom:5px}:host(.mobile) .nav-list .nav-item a{display:block;padding:5px 20px}.nav-list{display:flex;list-style:none;padding:0px;margin:0px}.nav-list .nav-item{margin-left:10px}.nav-list .nav-item a{background-color:dimgray;display:block;padding:5px 20px;color:white;text-decoration:none;font-weight:500;transition:background-color 0.3s}.nav-list .nav-item a:hover{background-color:#fff;color:#2e302b}\n", ""]);
 
 
 
@@ -1526,7 +1484,7 @@ module.exports = "<div [ngClass]=\"['splash-screen', 'displayType-' + displayTyp
 
 exports = module.exports = __webpack_require__(56)(false);
 // Module
-exports.push([module.i, ".splash-screen img {\n  max-height: 100%;\n  max-width: 100%; }\n\n.splash-screen .content-wrapper {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  opacity: 0.4; }\n\n.splash-screen .size-large {\n  background: gainsboro; }\n  .splash-screen .size-large .img-wrapper {\n    height: 100px; }\n\n.splash-screen .size-small .img-wrapper {\n  height: 20px; }\n\n.displayType-absolute, .displayType-absolute .content-wrapper {\n  height: 100%; }\n", ""]);
+exports.push([module.i, ".splash-screen img{max-height:100%;max-width:100%}.splash-screen .content-wrapper{display:flex;justify-content:center;align-items:center;opacity:0.4}.splash-screen .size-large{background:gainsboro}.splash-screen .size-large .img-wrapper{height:100px}.splash-screen .size-small .img-wrapper{height:20px}.displayType-absolute,.displayType-absolute .content-wrapper{height:100%}\n", ""]);
 
 
 
@@ -1576,9 +1534,7 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
   return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var Bootstrapper_1 = __webpack_require__(246);
 
@@ -1660,9 +1616,7 @@ exports.MainModuleLibrary = MainModuleLibrary;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-}); //import {CustomerComponent} from '../components/CustomerComponent';
+exports.__esModule = true; //import {CustomerComponent} from '../components/CustomerComponent';
 
 var HomeComponent_1 = __webpack_require__(184);
 
@@ -1705,9 +1659,7 @@ var __metadata = this && this.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var core_1 = __webpack_require__(1);
 

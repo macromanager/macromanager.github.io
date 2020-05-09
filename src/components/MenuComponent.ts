@@ -6,7 +6,7 @@ import {Component, Output, EventEmitter} from "@angular/core"
     //moduleId: __moduleName,
     selector: "menu-ui",
     templateUrl: "../views/menu.html",
-    styleUrls: ["../assets/styles/css/menu.css"]
+    styleUrls: ["../assets/styles/menu.scss"]
 })
 export class MenuComponent {
     @Output() navigationEvent = new EventEmitter();

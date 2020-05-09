@@ -99254,9 +99254,7 @@ function share() {
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-}); // Angular
+exports.__esModule = true; // Angular
 
 __webpack_require__(61);
 

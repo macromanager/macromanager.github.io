@@ -8,7 +8,7 @@ import {ProductInfoService} from "../services/ProductInfoService";
     //moduleId: __moduleName,
     selector: "splashscreen-ui",
     templateUrl: "../views/splashscreen.html",
-    styleUrls: ["../assets/styles/css/splashscreen.css"]
+    styleUrls: ["../assets/styles/splashscreen.scss"]
 })
 export class SplashscreenComponent {
     @Input() size: string = "large";

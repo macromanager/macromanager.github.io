@@ -7,7 +7,7 @@ import {ProductInfoService} from "../services/ProductInfoService";
     //moduleId: __moduleName,
     selector: "footer-ui",
     templateUrl: "../views/footer.html",
-    styleUrls: ["../assets/styles/css/footer.css"]
+    styleUrls: ["../assets/styles/footer.scss"]
 })
 export class FooterComponent {
     constructor(private prodInfoService: ProductInfoService) {}

@@ -54,25 +54,29 @@ module.exports = {
     //       use: ['css-loader','postcss-loader','sass-loader']
     //     })
     //   },
+
       {
         test: /\.(css)$/,
         use: [
           "to-string-loader",
           "css-loader",
-          // "raw-loader"
         ]
       },
+
       {
-        test: /\.(scss)$/,
-        use: [
-          "style-loader", 
-          "css-loader",
-          {
-            loader: '"sass-loader"'
-          }
-          
-        ]
-      },
+        test: /\.scss$/,
+        loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
+        include: [helpers.root( 'src', 'assets/styles' )]
+    }
+
+      // {
+      //   test: /\.(scss)$/,
+      //   use: [
+      //     "style-loader", 
+      //     "css-loader",
+      //     "sass-loader"
+      //   ]
+      // },
 
 
     //   {

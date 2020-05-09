@@ -6,7 +6,7 @@ import {AppSplashScreenManager} from "../utilities/AppSplashScreenManager";
     //moduleId: __moduleName,
     selector: "app-ui",
     templateUrl: "../views/app.html",
-    styleUrls: ["../assets/styles/css/app.css"]
+    styleUrls: ["../assets/styles/app.scss"]
 })
 export class AppComponent {
     private splashManager: AppSplashScreenManager;

@@ -8,7 +8,7 @@ import {ProductInfoService} from "../services/ProductInfoService";
     //moduleId: __moduleName,
     selector: "header-ui",
     templateUrl: "../views/header.html",
-    styleUrls: ["../assets/styles/css/header.css"]
+    styleUrls: ["../assets/styles/header.scss"]
 })
 export class HeaderComponent {
     constructor(private prodInfoService: ProductInfoService) {

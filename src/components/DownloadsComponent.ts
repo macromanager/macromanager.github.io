@@ -10,7 +10,7 @@ import {AppSplashScreenManager} from "../utilities/AppSplashScreenManager";
     //moduleId: __moduleName,
     selector: "downloads-page-ui",
     templateUrl: "../views/downloads.html",
-    styleUrls: ["../assets/styles/css/downloads.css"]
+    styleUrls: ["../assets/styles/downloads.scss"]
 })
 export class DownloadsComponent {
     public installers: Installer[];
