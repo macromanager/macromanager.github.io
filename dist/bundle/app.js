@@ -1304,7 +1304,7 @@ module.exports = "<div class=\"app\">\r\n    <header>\r\n        <header-ui clas
 
 exports = module.exports = __webpack_require__(40)(false);
 // Module
-exports.push([module.i, ".app{display:flex;flex-direction:column;height:100vh}.app main{display:flex;flex-direction:column;flex-grow:1}.app main .content-wrapper{flex-grow:1;position:relative}.app main .content-wrapper splashscreen-ui{position:absolute;z-index:1000;top:0px;bottom:0px;width:100%}\n", ""]);
+exports.push([module.i, ".app{display:flex;flex-direction:column;min-height:100vh}.app main{display:flex;flex-direction:column;flex-grow:1}.app main .content-wrapper{flex-grow:1;position:relative}.app main .content-wrapper splashscreen-ui{position:absolute;z-index:1000;top:0px;bottom:0px;width:100%}\n", ""]);
 
 
 
