@@ -3,11 +3,9 @@
         <header-ui class='header'></header-ui>
     </header>
     <main>
-        <noticeBar-ui (closeNoticeEvent)="noticeManuallyClosed()" [hidden]="!showNotice" [notice]="notice"></noticeBar-ui>
-        <div class="content-wrapper">
-            <splashscreen-ui id="appSplash" [displayType]="'absolute'" [size]="'large'" [hidden]="!isBusy"></splashscreen-ui>
+        <pageWrapper-ui [isBusy]="isBusy" [notices]="notices">
             <router-outlet></router-outlet>
-        </div>
+        </pageWrapper-ui>
     </main>
     <footer>
         <footer-ui></footer-ui>

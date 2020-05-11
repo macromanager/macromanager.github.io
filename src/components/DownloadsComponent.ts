@@ -1,7 +1,7 @@
 import {Component} from "@angular/core"
 import {Installer} from "../models/Installer"
 import {ProductInfoService} from "../services/ProductInfoService";
-import {AppSplashScreenManager} from "../utilities/AppSplashScreenManager";
+import {Notice} from "../models/Notice";
 
 
 
@@ -15,24 +15,42 @@ import {AppSplashScreenManager} from "../utilities/AppSplashScreenManager";
 export class DownloadsComponent {
     public installers: Installer[];
     private productInfoService: ProductInfoService;
-    private appSplashScreenManager: AppSplashScreenManager;
-    
+    private isBusy: boolean;
+    private notices: Notice[] = [];
 
-    constructor(prodInfoService: ProductInfoService, appSplashScreenManager: AppSplashScreenManager) {
+    constructor(prodInfoService: ProductInfoService) {
         this.productInfoService = prodInfoService;
-        this.appSplashScreenManager = appSplashScreenManager;
     }
 
     ngOnInit() {
         this.setDownloads();
     }
+
+    private setNotices(): void {
+        var notice1 = new Notice("This may take a few seconds while the server boots up", "info");
+        var notice2 = new Notice("This is taking forever...", "info");
+        var notice3 = new Notice("...I hope you're not a recruiter", "info");
+
+        this.notices.push(notice1);
+        this.notices.push(notice2);
+        this.notices.push(notice3);
+
+        notice1.begin(0, 2000);
+        notice2.begin(4000, 5000);
+        notice3.begin(6000, 3000);
+    }
  
     private setDownloads(): void {
-        this.appSplashScreenManager.requestSplashScreen(true);
+        this.setNotices();
+        this.isBusy = true;
         this.productInfoService.getInstallers()
         .then(installers => {
+            this.notices.forEach((notice)=>{
+                notice.end();                
+            })
+            this.notices = [];
             this.installers = installers;
-            this.appSplashScreenManager.requestSplashScreen(false);
+            this.isBusy = false;
 
         })
     }

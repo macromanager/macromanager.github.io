@@ -1,6 +1,5 @@
 import {Component} from "@angular/core"
 
-
 @Component({
     moduleId: module.id,
     //moduleId: __moduleName,
@@ -8,6 +7,5 @@ import {Component} from "@angular/core"
     templateUrl: "../views/learn.html",
     styleUrls: ["../assets/styles/learn.scss"]
 })
-export class LearnComponent {
-    
+export class LearnComponent {    
 }
