@@ -4,18 +4,28 @@
     flex-direction: column;
     height: 100vh;
     main{
+        display: flex;
+        flex-direction: column;
         flex-grow: 1;
-        position: relative;
-        splashscreen-ui {
-            position: absolute;
-            z-index: 1000;
-            top: 0px;
-            bottom: 0px;
-            width: 100%;
-            .splash-screen, .content-wrapper {
-                height: 100%
+        .content-wrapper{
+            flex-grow: 1;
+            position: relative;
+            splashscreen-ui {
+                position: absolute;
+                z-index: 1000;
+                top: 0px;
+                bottom: 0px;
+                width: 100%;
             }
         }
+
+        noticeBar-ui{
+            // position: absolute;
+            // z-index: 1001;
+            // top: 0px;
+            // width: 100%;
+        }
+
     }
 }
 

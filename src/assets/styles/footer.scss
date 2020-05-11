@@ -4,5 +4,8 @@
   color: $white;
   .logo-wrapper{
     max-width: 200px;
+    img{
+      margin: 0px -25px;
+    }
   }
 }

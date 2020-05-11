@@ -1,4 +1,7 @@
 @import 'variables';
+@import "~font-awesome/scss/font-awesome.scss";
+// @import "./fontawesome/scss/solid.scss";
+// @import "./fontawesome/scss/brands.scss";
 html, body{
     width: 100%;
     height: 100%;
@@ -8,25 +11,50 @@ html, body{
     background-color: $white;
 }
 
-// .app{
-//     display: flex;
-//     flex-direction: column;
-//     min-height: 100vh;
-//     main{
-//         flex-grow: 1
-//     }
-// }
-
-
-
 section{
     padding: 50px 0px
 }
 
-// a{
-    // text-decoration: none;
+%my-fa-icon{
+    &:before{
+        font-family: "Font Awesome 5 Free";
+        vertical-align: middle;
+        font-weight: 900;
+        font-size: 30px;
+        font-style: normal;
+    }
+}
 
-// }
+.my-close{
+    cursor: pointer;
+    @extend %my-fa-icon;
+    &:before {
+        font-size: 25px;
+        content: "\f057";
+    }
+}
+
+%severity-symbol{
+    @extend %my-fa-icon;
+    &:before{
+        line-height: 50px;
+        font-size: 50px;
+    }
+}
+.severity-info-symbol {
+    @extend %severity-symbol;
+    &:before {
+        content: "\f05a";
+    }
+}
+
+.severity-slow-symbol{
+    @extend %severity-symbol;
+    &:before{
+        content: "\f252";
+    }
+}
+
 .title{
     @extend %title-font-size;
     @extend %title-space;

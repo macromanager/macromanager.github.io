@@ -16,16 +16,13 @@ export class HeaderComponent {
     public logoUrl: string;
     private isMobileMenuVisibility: boolean = false;
 
-
     private menuClickHandler(): void {
         var menu = document.getElementById('collapseMobileMenu');
         menu.classList.remove("show");
-
     }
 
     ngOnInit() {
         this.setLogo();
-        //this.setCards();
     }
  
     private setLogo(): void {

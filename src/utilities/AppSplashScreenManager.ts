@@ -5,13 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class AppSplashScreenManager {
     private splashRequestIds: object = {};
-    private handler: (isVisible: boolean)=>void;
+    private splashHandler: (isVisible: boolean)=>void;
 
-    public SetSplashScreenRequestHandler(callback: (isVisible: boolean)=>void){
-      this.handler = callback;
+    public setSplashScreenRequestHandler(callback: (isVisible: boolean)=>void){
+      this.splashHandler = callback;
     }
     public requestSplashScreen(isVisible: boolean){
-      this.handler(isVisible);    
+      this.splashHandler(isVisible);    
     }
 
 }

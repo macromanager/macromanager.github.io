@@ -3,8 +3,11 @@
         <header-ui class='header'></header-ui>
     </header>
     <main>
-        <splashscreen-ui id="appSplash" [displayType]="'absolute'" [size]="'large'" [hidden]="!isBusy"></splashscreen-ui>
-        <router-outlet></router-outlet>
+        <noticeBar-ui (closeNoticeEvent)="noticeManuallyClosed()" [hidden]="!showNotice" [notice]="notice"></noticeBar-ui>
+        <div class="content-wrapper">
+            <splashscreen-ui id="appSplash" [displayType]="'absolute'" [size]="'large'" [hidden]="!isBusy"></splashscreen-ui>
+            <router-outlet></router-outlet>
+        </div>
     </main>
     <footer>
         <footer-ui></footer-ui>
