@@ -1,5 +1,19 @@
 @import 'global';
+@import 'page';
+
+:host{
+    &, pageWrapper-ui{
+        display: flex;
+        width: 100%;
+    }
+}
 .page-downloads{
+    &{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    
+    }
     .subtitle{
         text-decoration: underline;
     }

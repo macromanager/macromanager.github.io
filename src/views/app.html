@@ -3,9 +3,11 @@
         <header-ui class='header'></header-ui>
     </header>
     <main>
-        <pageWrapper-ui [isBusy]="isBusy" [notices]="notices">
+        <router-outlet></router-outlet>
+
+        <!-- <pageWrapper-ui [isBusy]="isBusy" [notices]="notices">
             <router-outlet></router-outlet>
-        </pageWrapper-ui>
+        </pageWrapper-ui> -->
     </main>
     <footer>
         <footer-ui></footer-ui>

@@ -36,8 +36,8 @@ export class DownloadsComponent {
         this.notices.push(notice3);
 
         notice1.begin(0, 2000);
-        notice2.begin(4000, 5000);
-        notice3.begin(6000, 3000);
+        notice2.begin(4000, 1000*60*60*24);
+        notice3.begin(6000, 1000*60*60*24);
     }
  
     private setDownloads(): void {
@@ -45,12 +45,15 @@ export class DownloadsComponent {
         this.isBusy = true;
         this.productInfoService.getInstallers()
         .then(installers => {
-            this.notices.forEach((notice)=>{
-                notice.end();                
-            })
-            this.notices = [];
-            this.installers = installers;
-            this.isBusy = false;
+            setTimeout(() => {
+                this.notices.forEach((notice)=>{
+                    notice.end();                
+                })
+                this.notices = [];
+                this.installers = installers;
+                this.isBusy = false;
+            }, 0);
+
 
         })
     }
