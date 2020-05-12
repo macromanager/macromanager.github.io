@@ -1372,7 +1372,7 @@ module.exports = "<div id=\"carouselExampleControls\" class=\"carousel slide\" d
 
 exports = module.exports = __webpack_require__(40)(false);
 // Module
-exports.push([module.i, ".carousel .carousel-controls{justify-content:flex-end;margin-bottom:10px}.carousel .carousel-controls .carousel-control-wrapper{display:inline-block}.carousel .carousel-controls .carousel-control-wrapper a{display:inline-block;position:static;width:auto;margin-left:5px}.carousel .carousel-controls .carousel-icon-wrapper{background-color:black;padding:8px}.carousel .carousel-inner{margin:auto}\n", ""]);
+exports.push([module.i, ".carousel .carousel-inner{border:dashed 0.7px gray}.carousel .carousel-controls{justify-content:flex-end;margin-bottom:10px}.carousel .carousel-controls .carousel-control-wrapper{display:inline-block}.carousel .carousel-controls .carousel-control-wrapper a{display:inline-block;position:static;width:auto;margin-left:5px}.carousel .carousel-controls .carousel-icon-wrapper{background-color:black;padding:8px}.carousel .carousel-inner{margin:auto}\n", ""]);
 
 
 
@@ -2018,8 +2018,8 @@ function () {
   };
 
   ProductInfoService.prototype.initializeImages = function () {
-    var imagesPath = this.config.getUploadsPath() + '/macro-manager-images';
-    var urls = [imagesPath + '/macro_packages.png', imagesPath + '/macro_macroEditor_properties.png', imagesPath + '/macro_macroEditor_code.png', imagesPath + '/macro_account_packages.png', imagesPath + '/macro_install.png'];
+    var imagesPath = this.config.getUploadsPath() + '/product-demo-images';
+    var urls = [imagesPath + '/packages.png', imagesPath + '/dashboard.png', imagesPath + '/pkgEditor.png', imagesPath + '/macroEditorSource.png', imagesPath + '/macroEditorProps.png', imagesPath + '/installPackage.png', imagesPath + '/packagesLoggedOut.png'];
     return urls;
   };
 

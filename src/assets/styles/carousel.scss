@@ -1,7 +1,8 @@
 @import 'variables';
 .carousel{
-    .slide-wrapper{
-        //padding: 0px 40px;
+    .carousel-inner{
+        //box-shadow: $boxShadow;
+        border: dashed 0.7px gray;
     }
     .carousel-controls{
         justify-content: flex-end;

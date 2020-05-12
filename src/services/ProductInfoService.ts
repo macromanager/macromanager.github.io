@@ -6,8 +6,6 @@ import {Card} from '../models/Card';
 import {Installer} from '../models/Installer';
 import { promises } from 'fs';
 
-
-
 @Injectable({
   providedIn: 'root',
 })
@@ -98,14 +96,15 @@ export class ProductInfoService {
 
 
     private initializeImages(){
-      var imagesPath = this.config.getUploadsPath() + '/macro-manager-images';
+      var imagesPath = this.config.getUploadsPath() + '/product-demo-images';
       var urls = [
-        imagesPath + '/macro_packages.png',
-        imagesPath + '/macro_macroEditor_properties.png',
-        imagesPath + '/macro_macroEditor_code.png',
-        imagesPath + '/macro_account_packages.png',
-        imagesPath + '/macro_install.png',
-        // '/images/macro-manager-images/macro_login.png',
+        imagesPath + '/packages.png',
+        imagesPath + '/dashboard.png',
+        imagesPath + '/pkgEditor.png',
+        imagesPath + '/macroEditorSource.png',
+        imagesPath + '/macroEditorProps.png',
+        imagesPath + '/installPackage.png',
+        imagesPath + '/packagesLoggedOut.png',
       ]
       return urls;
     }
