@@ -22,4 +22,9 @@
 
 .section-cards{
     background-color: $grey;
+    @media (max-width: $md) {  
+        card-ui{
+            margin: 10px 0px;
+        }
+    }
 }

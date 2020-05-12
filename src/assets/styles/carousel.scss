@@ -1,21 +1,30 @@
 @import 'variables';
 .carousel{
     .slide-wrapper{
-        padding: 0px 40px;
+        //padding: 0px 40px;
     }
-    // .carousel-control-next, .carousel-control-prev{
-    //     background-color: gray;
-    // }
+    .carousel-controls{
+        justify-content: flex-end;
+        margin-bottom: 10px;
+        .carousel-control-wrapper{
+            display: inline-block;
+            a{
+                display: inline-block;
+                position: static;
+                width: auto;
+                margin-left: 5px;
+            }
+        }
+    
+        .carousel-icon-wrapper{
+            background-color: black;
+            padding: 8px;
+        }
+    }
 
-    .carousel-icon-wrapper{
-        background-color: black;
-        padding: 8px;
-    }
 
     .carousel-inner{
         margin: auto;
-        width: 80%;
-        max-width: 600px;
     }
 
     
