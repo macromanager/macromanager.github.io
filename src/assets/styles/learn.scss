@@ -2,6 +2,7 @@
 @import 'page';
 
 .page-learn{
+    background-color: $grey;
     .subtitle{
         //font-size: 20px;
         text-decoration: underline;
@@ -23,7 +24,6 @@
     //     }
     // }
     .section-example{
-        background-color: $grey;
         // .image-wrapper{
         //     width: 100%;
         //     height: auto;
