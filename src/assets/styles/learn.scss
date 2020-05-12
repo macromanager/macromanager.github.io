@@ -1,8 +1,9 @@
 @import 'global';
 @import 'page';
-
-.page-learn{
+:host{
     background-color: $grey;
+}
+.page-learn{
     .subtitle{
         //font-size: 20px;
         text-decoration: underline;
