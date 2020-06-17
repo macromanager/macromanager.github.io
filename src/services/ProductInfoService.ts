@@ -45,7 +45,9 @@ export class ProductInfoService {
         var dataItems = data.items;
         var installers: Array<Installer> = [];
         dataItems.forEach(function(item){
-          var installer = new Installer(item.title, item.version, item.filename)
+          var title = item.title + " " + item.version
+          if(installers.length == 0) {title += " (Latest)"}
+          var installer = new Installer(title, item.version, item.filename)
           installers.push(installer);
         });
         return installers;

@@ -12,7 +12,7 @@
                             <li *ngFor="let installer of installers">
                                 <div class="item-wrapper">
                                     <a (click)="installerClickHandler($event)" class="installer" attr.version="{{installer.version}}">
-                                        {{installer.title}} {{installer.version}}
+                                        {{installer.title}}
                                     </a>
                                     <splashscreen-ui [size]="'small'" [hidden]="true" ></splashscreen-ui>
                                 </div>

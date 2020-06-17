@@ -1452,7 +1452,7 @@ exports.Installer = Installer;
 /***/ 549:
 /***/ (function(module, exports) {
 
-module.exports = "<pageWrapper-ui [isBusy]=\"isBusy\" [notices]=\"notices\" >\r\n    <div class=\"page page-downloads\">\r\n        <section class=\"section-downloads\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-12\">\r\n                        <h1 class=\"title\"> Windows Installers </h1>\r\n                        <p>\r\n                            This application is currently in the beta testing phase.\r\n                        </p>\r\n                        <ul class=\"installers\">\r\n                            <li *ngFor=\"let installer of installers\">\r\n                                <div class=\"item-wrapper\">\r\n                                    <a (click)=\"installerClickHandler($event)\" class=\"installer\" attr.version=\"{{installer.version}}\">\r\n                                        {{installer.title}} {{installer.version}}\r\n                                    </a>\r\n                                    <splashscreen-ui [size]=\"'small'\" [hidden]=\"true\" ></splashscreen-ui>\r\n                                </div>\r\n                            </li>\r\n                        </ul>            \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </div>\r\n</pageWrapper-ui>\r\n\r\n      \r\n";
+module.exports = "<pageWrapper-ui [isBusy]=\"isBusy\" [notices]=\"notices\" >\r\n    <div class=\"page page-downloads\">\r\n        <section class=\"section-downloads\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-12\">\r\n                        <h1 class=\"title\"> Windows Installers </h1>\r\n                        <p>\r\n                            This application is currently in the beta testing phase.\r\n                        </p>\r\n                        <ul class=\"installers\">\r\n                            <li *ngFor=\"let installer of installers\">\r\n                                <div class=\"item-wrapper\">\r\n                                    <a (click)=\"installerClickHandler($event)\" class=\"installer\" attr.version=\"{{installer.version}}\">\r\n                                        {{installer.title}}\r\n                                    </a>\r\n                                    <splashscreen-ui [size]=\"'small'\" [hidden]=\"true\" ></splashscreen-ui>\r\n                                </div>\r\n                            </li>\r\n                        </ul>            \r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </div>\r\n</pageWrapper-ui>\r\n\r\n      \r\n";
 
 /***/ }),
 
@@ -1966,7 +1966,13 @@ function () {
       var dataItems = data.items;
       var installers = [];
       dataItems.forEach(function (item) {
-        var installer = new Installer_1.Installer(item.title, item.version, item.filename);
+        var title = item.title + " " + item.version;
+
+        if (installers.length == 0) {
+          title += " (Latest)";
+        }
+
+        var installer = new Installer_1.Installer(title, item.version, item.filename);
         installers.push(installer);
       });
       return installers;
