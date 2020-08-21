@@ -2,7 +2,11 @@ import 'babel-polyfill';
 import 'core-js/proposals/reflect-metadata';
 import 'zone.js/dist/zone';
 import { enableProdMode } from '@angular/core';
-enableProdMode();
+console.log("called")
+console.log("env:" + process.env)
+if(process.env.ENV == 'production'){
+    enableProdMode();
+}
 
 import {Bootstrapper} from './Bootstrapper';
 Bootstrapper.initialize();

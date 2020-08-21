@@ -139,15 +139,18 @@ function () {
     this.setNotices();
     this.isBusy = true;
     this.productInfoService.getInstallers().then(function (installers) {
+      _this.installers = installers;
+    }).catch(function (err) {
+      alert("There was an issue retrieving the installer. Please contact evandsilverstein@gmail.com to get the installer.");
+    }).finally(function () {
       setTimeout(function () {
         _this.notices.forEach(function (notice) {
           notice.end();
         });
 
         _this.notices = [];
-        _this.installers = installers;
         _this.isBusy = false;
-      }, 0);
+      });
     });
   };
 
@@ -1007,6 +1010,12 @@ __webpack_require__(473);
 __webpack_require__(226);
 
 var Bootstrapper_1 = __webpack_require__(246);
+
+var core_1 = __webpack_require__(1);
+
+if (true) {
+  core_1.enableProdMode();
+}
 
 Bootstrapper_1.Bootstrapper.initialize();
 

@@ -45,18 +45,18 @@ export class DownloadsComponent {
         this.isBusy = true;
         this.productInfoService.getInstallers()
         .then(installers => {
+            this.installers = installers;
+        }).catch( err => {
+            alert("There was an issue retrieving the installer. Please contact evandsilverstein@gmail.com to get the installer.")
+        }).finally(() => {
             setTimeout(() => {
                 this.notices.forEach((notice)=>{
                     notice.end();                
                 })
                 this.notices = [];
-                this.installers = installers;
                 this.isBusy = false;
-            }, 0);
-
-
-        })
-    }
+            })
+        })}
 
 
 
